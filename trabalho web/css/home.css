@@ -27,23 +27,12 @@ body, html {
 
 .header_logo {
     padding-top: 30px;
-    
-}
-
-.header_logo:hover .ativaNoHover{
-    width: 70px;
-    height: 70px;
-    background-image: url(/images/cafe_parado.png);
-    background-size: cover;
-    cursor: pointer;
-    padding: 0%;
-    margin-top: 0%;
 }
 
 .ativaNoHover {
     width: 70px;
     height: 70px;
-    background-image: url(/images/cafe_parado.png);
+    background-image: url(../images/cafe_parado.png);
     background-size: cover;
     cursor: pointer;
     padding: 0%;
@@ -51,5 +40,5 @@ body, html {
 }
 
 .ativaNoHover:hover {
-    background-image: url(/images/coffee-cup.gif);
+    background-image: url(../images/coffee-cup.gif);
 }
