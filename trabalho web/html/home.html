@@ -37,7 +37,7 @@
 										<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 												<span class="navbar-toggler-icon"></span>
 										</button>
-										<div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="padding-top: 35px;">
+										<div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="padding-top: 27px;">
 												<ul class="navbar-nav">
 														<li class="nav-item">
 																<a class="nav-link active" aria-current="page" href="home.html">Home</a>
@@ -48,9 +48,6 @@
 														<li class="nav-item">
 																<a class="nav-link" href="#">Sobre</a>
 														</li>
-														<li class="nav-item">
-																<a class="nav-link" href="#">Claro</a>
-														</li>
 												</ul>
 										</div>
 								</div>
@@ -58,29 +55,47 @@
 				</div>
 		</header>
 		
-		<!--HOME-->
-		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="..." class="d-block w-100" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img src="..." class="d-block w-100" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img src="..." class="d-block w-100" alt="...">
-				</div>
+		<!-- Showcase -->
+		<section
+		class="text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+	  >
+		<div class="container">
+		  <div class="d-sm-flex align-items-center justify-content-between">
+			<div>
+			  <h1>Aquele <span class="marrom">Cafézin</span> gostoso de infância</h1>
+			  <p class="lead my-4">
+				Nosso objetivo é lhe proporcionar boas experiências envolvendo os aromas e sabores do café.
+			  </p>
+			  <button
+				class="btn btn-lg fundo-marrom"
+				data-bs-toggle="modal"
+				data-bs-target="#enroll"
+			  >
+			  <span class="text-light">Saiba mais</span>
+			  </button>
 			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
+			<img
+			  class="img-fluid w-50 d-none d-sm-block"
+			  src="../images/cafe-andando.gif"
+			  alt=""
+			/>
+		  </div>
+		</div>
+	  	</section>
+		
+		<div class="mt-5">
+			<div class="container">
+				<h3><strong>Novos sabores</strong></h3>
+			</div>			
 		</div>
 
+		<!-- Footer -->
+		<footer class="p-3 text-white text-center position-relative fundo-marrom">
+			<div class="container">
+			  <p class="lead">Copyright &copy; 2022 Café Margoso</p>
+			</div>
+		</footer>
+		
 		<!-- JQuery -->
 		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 

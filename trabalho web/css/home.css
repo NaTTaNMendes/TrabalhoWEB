@@ -32,7 +32,7 @@ body, html {
 .ativaNoHover {
     width: 70px;
     height: 70px;
-    background-image: url(../images/cafe_parado.png);
+    background-image: url(../images/logo.png);
     background-size: cover;
     cursor: pointer;
     padding: 0%;
@@ -40,5 +40,13 @@ body, html {
 }
 
 .ativaNoHover:hover {
-    background-image: url(../images/coffee-cup.gif);
+    background-image: url(../images/logo-girando.gif);
+}
+
+.marrom {
+    color: chocolate;
+}
+
+.fundo-marrom {
+    background-color: chocolate;
 }
