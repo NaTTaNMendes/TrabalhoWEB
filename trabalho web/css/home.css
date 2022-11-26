@@ -12,6 +12,12 @@ body, html {
     width: auto;
 }
 
+@media screen and ( max-width : 450px ) {
+    .header_logo {
+        display: none;
+    }
+}
+
 .nav-link {
     border-bottom: solid 2px transparent;
     color: black;
