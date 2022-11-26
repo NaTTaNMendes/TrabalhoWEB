@@ -2,8 +2,6 @@ body, html {
     font-family: 'Jost', sans-serif;
 }
 
-he
-
 #header {
     width: 100%;
     background-color: transparent;
@@ -51,4 +49,12 @@ he
 
 .fundo-marrom {
     background-color: chocolate;
+}
+
+.imagem-carousel {
+    max-width: 50%;
+}
+
+#botao-saiba-mais:hover {
+    background-color : rgb(112,89,87);
 }
