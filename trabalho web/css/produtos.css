@@ -5,12 +5,20 @@
 
 html, body {
     height: 100%;
+    font-family: 'Jost', sans-serif;
 }
-
 .item {
     width: 30%;
     margin: 10px;
     display: inline-block;
+    align-items: center;
+    overflow: hidden;
+}
+
+.row {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .tipo-item {
@@ -19,19 +27,21 @@ html, body {
 }
  
 .tipo-item:hover {
-    background-color: rgb(21, 193, 216);
+    background-color: chocolate;
     transition-duration: 500ms;
 }
 
-#header {
+header {
+    margin-bottom: 30px;
     width: 100%;
     background-color: transparent;
     transition: background ease-out 0.2s;
 }
 
-#header .navbar-collapse {
+header .navbar-collapse {
     width: auto;
 }
+
 
 .item-header {
     border-bottom: solid 2px transparent;
@@ -53,7 +63,7 @@ html, body {
 .ativaNoHover {
     width: 70px;
     height: 70px;
-    background-image: url(../images/cafe_parado.png);
+    background-image: url(../images/logo.png);
     background-size: cover;
     cursor: pointer;
     padding: 0%;
@@ -61,6 +71,58 @@ html, body {
 }
 
 .ativaNoHover:hover {
-    background-image: url(../images/coffee-cup.gif);
+    background-image: url(../images/logo-girando.gif);
 }
 
+.marrom {
+    color: chocolate;
+}
+
+.fundo-marrom {
+    background-color: chocolate;
+}
+
+.produto {
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+h6 {
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.detalhes {
+    background-color: white;
+    border: 0;
+    
+}
+
+.marrom {
+    color: chocolate;
+}
+
+.fundo-marrom {
+    background-color: chocolate;
+}
+
+.titulo {
+    width: 50%;
+    display: inline-block;
+}
+
+.botao {
+    display: inline-block;
+    width: 48%;
+    text-align: right;
+}
+
+i {
+    font-size: 20px;
+}
+
+i:hover {
+    color: chocolate;
+}
