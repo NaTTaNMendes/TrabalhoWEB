@@ -61,6 +61,26 @@ body, html {
     max-width: 50%;
 }
 
+.centralizar {
+    text-align: center;
+}
+
 #botao-saiba-mais:hover {
     background-color : rgb(112,89,87);
+}
+
+#card {
+    width: 20%;
+    height: 20%;
+    transition: width 0.3s;   
+}
+
+#card:hover {
+    width: 21%;
+  }
+
+footer {
+    position: absolute;
+    bottom:0;
+    left:0;
 }
