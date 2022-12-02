@@ -1,4 +1,3 @@
-
 /* Html E Body */
 
 html{
@@ -106,19 +105,19 @@ h1{
 
 /* Texto Esquerda */
 
+
 .Texto-Esquerda{
     height: 100%;
-    width: 30%;
-    
-    padding-right: 150px;
-
+    width: 40%;
+        
     display: inline-block;
-
+    
 }
 
 .Texto-Esquerda h2{
     font-size: 30px;
 }
+
 
 .Lista-Item{
     margin-top: 30px;
@@ -176,10 +175,8 @@ h1{
 
 .Texto-Direita{
     height: 100%;
-    width: 30%;
+    width: 40%;
     max-height: 700px;
-
-    padding-right: 5%;
 
     display: inline-block;
 }
@@ -365,3 +362,72 @@ footer {
     left:0;
     background: chocolate;
 }
+
+
+/* Responsividade com BreakPoints */
+
+
+@media screen and ( max-width : 1200px ) and (min-width : 700px) {
+ .Img-Mid{
+    width: 275px;
+    height: 325px;
+
+    position: absolute;
+    }
+
+}
+
+@media screen and ( max-width : 700px ) and (min-width : 0px) {
+    .Img-Mid{
+        width: 200px;
+        height: 250px;
+    
+        position: absolute;
+        }
+    
+    .Section-Introducao{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .Texto-Esquerda{
+        padding-right: 10px;
+    }
+
+
+    .Texto-Direita	h2{
+        font-size: 25px;
+    
+    }
+    
+    .Texto-Direita p{
+        font-size: 15px;
+    }
+   
+    .Texto-Esquerda h2{
+        font-size: 25px;
+    }
+    
+   .Lista-Item{
+        font-size: 15px; 
+   } 
+
+   .Section-Staff{
+    height: 400px;
+   }
+ 
+   .Staff-Name{
+    font-size: 15px;
+   }
+
+   .Icon{
+    height: 50px;
+   }
+
+   .Text{
+    font-size: 14px;
+   }
+
+}
+
