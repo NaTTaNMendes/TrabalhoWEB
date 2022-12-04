@@ -37,14 +37,13 @@ button {
     transition-duration: 500ms;
 }
 
-header {
-    margin-bottom: 30px;
+#header {
     width: 100%;
     background-color: transparent;
     transition: background ease-out 0.2s;
 }
 
-header .navbar-collapse {
+#header .navbar-collapse {
     width: auto;
 }
 
@@ -71,6 +70,18 @@ header .navbar-collapse {
 
 .header_logo {
     padding-top: 30px;
+}
+
+.nav-link {
+    border-bottom: solid 2px transparent;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.nav-link:hover {
+    border-bottom: solid 2px black;
 }
 
 .ativaNoHover {
@@ -156,7 +167,7 @@ img {
     width: 98%;
 }
 
-#container-informacoes {
+.container-informacoes {
     display: none; 
     flex-direction: column;
     justify-content: center;
