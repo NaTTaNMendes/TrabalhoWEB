@@ -1,0 +1,380 @@
+!!!
+%html{:lang => "pt-br"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %title Café margoso
+    %link{:href => "./images/logo.png", :rel => "shortcut icon"}/
+    / javascript
+    %script{:src => "./js/produtos.js"}
+    / Bootstrap Icons
+    %link{:href => "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css", :rel => "stylesheet"}/
+    / Bootstrap CSS
+    %link{:crossorigin => "anonymous", :href => "https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css", :integrity => "sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi", :rel => "stylesheet"}/
+    / HTML5 SHIV
+    %script{:src => "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"}
+    / CSS Custom
+    %link{:href => "./css/produtos.css", :rel => "stylesheet"}/
+    %script{:crossorigin => "anonymous", :integrity => "sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3", :src => "https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"}
+    / Fonte Jost
+    %link{:href => "https://fonts.googleapis.com", :rel => "preconnect"}/
+    %link{:crossorigin => "", :href => "https://fonts.gstatic.com", :rel => "preconnect"}/
+    %link{:href => "https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap", :rel => "stylesheet"}/
+  %body
+    / Header
+    %header
+      .container
+        %nav.navbar.navbar-expand-lg.navbar-light
+          .container-fluid
+            %a.ativaNoHover{:href => "index.html"}
+            %h1.header_logo CAFÉ MARGOSO
+            %button.navbar-toggler{"aria-controls" => "navbarScroll", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarScroll", "data-bs-toggle" => "collapse", :type => "button"}
+              %span.navbar-toggler-icon
+            #navbarScroll.collapse.navbar-collapse.justify-content-end{:style => "padding-top: 27px;"}
+              %ul.navbar-nav
+                %li.nav-item
+                  %a.nav-link{"aria-current" => "page", :href => "index.html"} Home
+                %li.nav-item
+                  %a.nav-link.active{:href => "produtos.html"} Produtos
+                %li.nav-item
+                  %a.nav-link{:href => "sobre.html"} Sobre
+    .row.align-items-start
+      / sidebar
+      .d-flex.flex-column.sidebar.col-md-3{:style => "height: 30%;"}
+        %span.sidebar-title Produtos
+        %hr/
+        %ul.nav.nav-pills.flex-column.mb-auto
+          %li.nav-item.tipo-item
+            %button.categoria{:onclick => "ativaQuentes()"}
+              Bebidas Quentes
+          %li.nav-item.tipo-item
+            %button.categoria{:onclick => "ativaGeladas()"}
+              Bebidas geladas
+          %li.nav-item.tipo-item
+            %button.categoria{:onclick => "ativaDoces()"}
+              Doces
+          %li.nav-item.tipo-item
+            %button.categoria{:onclick => "ativaSalgados()"}
+              Salgados
+        %hr/
+      / Bebidas Quentes
+      .produtos.container.col-md-8
+        #bebidasQuentes
+          .item
+            %img.produto{:alt => "cappuccino em um copo branco", :src => "./images/produtos/cappuccino.jpg"}/
+            .descricao
+              %h6 Cappuccino
+              %button.detalhes{:onclick => "ativaCappucino()"}
+                %em.bi.bi-card-heading
+          .item
+            %img.produto{:alt => "dois cafés expressos servidos em copos de vidro", :src => "./images/produtos/expresso.jpg"}/
+            .descricao
+              %h6 Expresso
+              %button.detalhes{:onclick => "ativaExpresso()"}
+                %em.bi.bi-card-heading
+          .item
+            %img.produto{:alt => "Chocolate quente", :src => "./images/produtos/chocolatequente.jpg"}/
+            .descricao
+              %h6 Chocolate quente
+              %button.detalhes{:onclick => "ativaChocolateQuente()"}
+                %em.bi.bi-card-heading
+          .item{:style => "margin-right: 0"}
+            %img.produto{:alt => "café americano servido em uma xícara branca", :src => "./images/produtos/americano.jpg"}/
+            .descricao
+              %h6 Americano
+              %button.detalhes{:onclick => "ativaAmericano()"}
+                %em.bi.bi-card-heading
+        / Doces
+        #doces{:style => "display: none;"}
+          .item
+            %img.produto{:alt => "brownie", :src => "./images/produtos/brownie.jpg"}/
+            .descricao
+              %h6 Brownie
+              %button.detalhes{:onclick => "ativaBrownie()"}
+                %em.bi.bi-card-heading
+          .item
+            %img.produto{:alt => "cookie", :src => "./images/produtos/cookie.jpg"}/
+            .descricao
+              %h6 Cookie
+              %button.detalhes{:onclick => "ativaCookie()"}
+                %em.bi.bi-card-heading
+          .item
+            %img.produto{:alt => "torta de limão", :src => "./images/produtos/tortadelimão.jpg"}/
+            .descricao
+              %h6 Torta de limão
+              %button.detalhes{:onclick => "ativaTortaLimao()"}
+                %em.bi.bi-card-heading
+          .item
+            %img.produto{:alt => "donuts", :src => "./images/produtos/donuts.jpg"}/
+            .descricao
+              %h6 Donuts
+              %button.detalhes{:onclick => "ativaDonut()"}
+                %em.bi.bi-card-heading
+          .item{:style => "margin-right: 0"}
+            %img.produto{:alt => "brigadeiro", :src => "./images/produtos/brigadeiro.jpg"}/
+            .descricao
+              %h6 Brigadeiro
+              %button.detalhes{:onclick => "ativaBrigadeiro()"}
+                %em.bi.bi-card-heading
+        / Salgados
+        #salgados{:style => "display:none"}
+          .item
+            %img.produto{:alt => "pão de queijo", :src => "./images/produtos/pãodequeijo.jpg"}/
+            .descricao
+              %h6 Pão de Queijo
+              %button.detalhes{:onclick => "ativaPaoDeQueijo()"}
+                %em.bi.bi-card-heading
+          .item
+            %img.produto{:alt => "pastel", :src => "./images/produtos/pastel.jpg"}/
+            .descricao
+              %h6 Pastel
+              %button.detalhes{:onclick => "ativaPastel()"}
+                %em.bi.bi-card-heading
+          .item
+            %img.produto{:alt => "sanduiche", :src => "./images/produtos/sanduiche.jpg"}/
+            .descricao
+              %h6 Sanduíche
+              %button.detalhes{:onclick => "ativaSanduiche()"}
+                %em.bi.bi-card-heading
+          .item{:style => "margin-right: 0"}
+            %img.produto{:alt => "coxinha", :src => "./images/produtos/coxinha.jpg"}/
+            .descricao
+              %h6 Coxinha
+              %button.detalhes{:onclick => "ativaCoxinha()"}
+                %em.bi.bi-card-heading
+        / Bebidas Geladas
+        #bebidasGeladas{:style => "display: none;"}
+          #cafeGelado.item
+            %img.produto{:alt => "Café gelado", :src => "./images/produtos/cafégelado.jpg"}/
+            .descricao
+              %h6 Café gelado
+              %button.detalhes{:onclick => "ativaCafeGelado()"}
+                %em.bi.bi-card-heading
+          #chaGelado.item
+            %img.produto{:alt => "Chá gelado", :src => "./images/produtos/chágelado.jpg"}/
+            .descricao
+              %h6 Chá matte
+              %button.detalhes{:onclick => "ativaChaMatte()"}
+                %em.bi.bi-card-heading
+          #milkshake.item
+            %img.produto{:alt => "Milkshake", :src => "./images/produtos/milkshake.jpg"}/
+            .descricao
+              %h6 Milkshake
+              %button.detalhes{:onclick => "ativaMilkShake()"}
+                %em.bi.bi-card-heading
+          #affogato.item{:style => "margin-right: 0"}
+            %img.produto{:alt => "Affogato", :src => "./images/produtos/affogato.jpg"}/
+            .descricao
+              %h6 Affogato
+              %button.detalhes{:onclick => "ativaAffogato()"}
+                %em.bi.bi-card-heading
+    / Footer
+    %footer.p-3.text-white.text-center.position-relative.fundo-marrom
+      .container
+        %p.lead Copyright © 2022 Café Margoso
+    #cappuccino.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeCappuccino()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Cappuccino
+        %hr/
+        %p Valor: 11.50
+        %hr/
+        %p Ingredientes: Água, café, leite, açúcar, chocolate em pó e canela
+        %hr/
+        %p Sem glúten
+    #expresso.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeExpresso()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Expresso
+        %hr/
+        %p Valor: 8.00
+        %hr/
+        %p Ingredientes: Água, café
+        %hr/
+        %p Sem glúten
+    #chocolate-quente.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeChocolateQuente()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Chocolate quente
+        %hr/
+        %p Valor: 12.20
+        %hr/
+        %p Ingredientes: Leite, açúcar, chocolate em pó, amido de milho, canela e creme de leite
+        %hr/
+        %p Sem glúten
+    #americano.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeAmericano()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Americano
+        %hr/
+        %p Valor: 7.00
+        %hr/
+        %p Ingredientes: Água, café e açúcar
+        %hr/
+        %p Sem glúten
+    #cafe-gelado.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeCafeGelado()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Café gelado
+        %hr/
+        %p Valor: 7.00
+        %hr/
+        %p Ingredientes: Água, café e açúcar
+        %hr/
+        %p Sem glúten
+    #cha-matte.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeChaMatte()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Chá matte
+        %hr/
+        %p Valor: 6.00
+        %hr/
+        %p Ingredientes: Água, açúcar e erva matte
+        %hr/
+        %p Sem glúten
+    #milkshakecard.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeMilkshake()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Milkshake
+        %hr/
+        %p Valor: 12.00
+        %hr/
+        %p Ingredientes: Leite, sorvete e cobertura
+        %hr/
+        %p Contém glúten
+    #affogatocard.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeAffogato()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Affogato
+        %hr/
+        %p Valor: 18.00
+        %hr/
+        %p Ingredientes: Sorvete e café expresso
+        %hr/
+        %p Contém glúten
+    #brownie.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeBrownie()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Brownie
+        %hr/
+        %p Valor: 6.00
+        %hr/
+        %p Ingredientes: Farinha, leite, chocolate, manteiga e ovo
+        %hr/
+        %p Contém glúten
+    #cookie.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeCookie()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Cookie
+        %hr/
+        %p Valor: 7.00
+        %hr/
+        %p Ingredientes: Leite, chocolate, açúcar mascavo, manteiga, ovo, fermento e essência de baunilha
+        %hr/
+        %p Contém glúten
+    #torta-limao.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeTortaLimao()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Torta de limão
+        %hr/
+        %p Valor: 10.00
+        %hr/
+        %p Ingredientes: Maizena, margarina, leite condensado, creme de leite, limão e ovo
+        %hr/
+        %p Contém glúten
+    #brigadeiro.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeBrigadeiro()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Brigadeiro
+        %hr/
+        %p Valor: 5.00
+        %hr/
+        %p Ingredientes: Chocolate, leite condensado, manteiga e granulado
+        %hr/
+        %p Sem glúten
+    #pao-de-queijo.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondePaoDeQueijo()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Pão de queijo
+        %hr/
+        %p Valor: 5.00
+        %hr/
+        %p Ingredientes: Queijo, polvilho, farinha e sal
+        %hr/
+        %p Contém glúten
+    #pastel.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondePastel()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Pastel
+        %hr/
+        %p Valor: 16.00
+        %hr/
+        %p Ingredientes: Farinha, sal, ovo e recheio de escolha
+        %hr/
+        %p Contém glúten
+    #coxinha.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeCoxinha()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Coxinha
+        %hr/
+        %p Valor: 8.00
+        %hr/
+        %p Ingredientes: Leite, sal, farinha e recheio de escolha
+        %hr/
+        %p Contém glúten
+    #sanduiche.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeSanduiche()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Sanduíche
+        %hr/
+        %p Valor: 15.00
+        %hr/
+        %p Ingredientes: Pão, alface, tomate, queijo, presunto, maionese, picles, molho, e frango
+        %hr/
+        %p Contém glúten
+    #donuts.fixed-top.container-informacoes
+      .informacoes
+        .botao
+          %button{:onclick => "escondeDonut()", :style => "padding:0; width: 8%;"}
+            %em.bi.bi-x-circle-fill
+        %h1 Donut
+        %hr/
+        %p Valor: 5.00
+        %hr/
+        %p Ingredientes: Farinha, ovo, leite, açúcar, cobertura e granulado
+        %hr/
+        %p Contém glúten
+
